@@ -17,7 +17,15 @@ footer {
 }
 
 .form-control {
+  border-radius: 8px;
   background-color: #f3f3f3;
+
+  &:focus {
+    border-color: #29a867;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(41, 168, 103, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(41, 168, 103, 0.25);
+  }
 }
 
 img {
