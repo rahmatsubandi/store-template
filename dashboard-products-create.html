@@ -37,7 +37,7 @@
             </a>
             <a
               href="/dashboard-products.html"
-              class="list-group-item list-group-item-action"
+              class="list-group-item list-group-item-action active"
             >
               My Products
             </a>
@@ -49,7 +49,7 @@
             </a>
             <a
               href="/dashboard-settings.html"
-              class="list-group-item list-group-item-action active"
+              class="list-group-item list-group-item-action"
             >
               Store Settings
             </a>
@@ -149,8 +149,8 @@
           >
             <div class="container-fluid">
               <div class="dashboard-heading">
-                <h2 class="dashboard-title">Store Settings</h2>
-                <p class="dashboard-subtitle">Make store that profitable</p>
+                <h2 class="dashboard-title">Create New Product</h2>
+                <p class="dashboard-subtitle">Create your own product</p>
               </div>
               <div class="dashboard-content">
                 <div class="row">
@@ -161,15 +161,25 @@
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group">
-                                <label>Store Name</label>
+                                <label>Product Name</label>
                                 <input
                                   type="text"
                                   class="form-control"
-                                  placeholder="Input your store name.."
+                                  placeholder="Input your product name.."
                                 />
                               </div>
                             </div>
                             <div class="col-md-6">
+                              <div class="form-group">
+                                <label>Price</label>
+                                <input
+                                  type="number"
+                                  class="form-control"
+                                  placeholder="Input your price.."
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-12">
                               <div class="form-group">
                                 <label>Category</label>
                                 <select name="category" class="form-control">
@@ -179,44 +189,23 @@
                                 </select>
                               </div>
                             </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label>Description</label>
+                                <textarea name="editor"></textarea>
+                              </div>
+                            </div>
                             <div class="col-md-6">
                               <div class="form-group">
-                                <label>Store Status</label>
-                                <p class="text-muted">
-                                  Is your shop currently open?
+                                <label>Thumbnails</label>
+                                <input
+                                  type="file"
+                                  class="form-control"
+                                  placeholder="Input your thumbnails.."
+                                />
+                                <p class="text-muted font-italic">
+                                  You can select more than one file
                                 </p>
-                                <div
-                                  class="custom-control custom-radio custom-control-inline"
-                                >
-                                  <input
-                                    type="radio"
-                                    class="custom-control-input"
-                                    name="is_store_open"
-                                    id="openStoreTrue"
-                                    value="true"
-                                  />
-                                  <label
-                                    for="openStoreTrue"
-                                    class="custom-control-label"
-                                    >Open</label
-                                  >
-                                </div>
-                                <div
-                                  class="custom-control custom-radio custom-control-inline"
-                                >
-                                  <input
-                                    type="radio"
-                                    class="custom-control-input"
-                                    name="is_store_open"
-                                    id="openStoreFalse"
-                                    value="false"
-                                  />
-                                  <label
-                                    for="openStoreFalse"
-                                    class="custom-control-label"
-                                    >Temporarily Closed</label
-                                  >
-                                </div>
                               </div>
                             </div>
                           </div>
@@ -226,7 +215,7 @@
                                 type="submit"
                                 class="btn btn-success px-5"
                               >
-                                Save Now
+                                Create Product
                               </button>
                             </div>
                           </div>
@@ -254,6 +243,10 @@
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
       });
+    </script>
+    <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+    <script>
+      CKEDITOR.replace("editor");
     </script>
   </body>
 </html>

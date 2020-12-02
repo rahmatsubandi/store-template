@@ -4,7 +4,6 @@
     // min-width: 100vw;
   }
 
-  // Sidebar
   #sidebar-wrapper {
     margin-top: 60px;
     min-height: 100vh;
@@ -75,9 +74,7 @@
       }
     }
   }
-  // End Sidebar
 
-  // Card
   .section-content {
     margin-top: 100px;
 
@@ -107,7 +104,21 @@
       color: #9191a9;
     }
 
-    // Navs
+    .producct-title {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 25px;
+      color: #c5c5c5;
+    }
+
+    .product-subtitle {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 30px;
+      color: #0c0d36;
+      margin-bottom: 20px;
+    }
+
     .nav-pills {
       .nav-link {
         font-weight: normal;
@@ -124,6 +135,14 @@
         }
       }
     }
+
+    .gallery-container {
+      .delete-gallery {
+        display: block;
+        position: absolute;
+        top: -10px;
+        right: 0;
+      }
+    }
   }
-  // End Card
 }
